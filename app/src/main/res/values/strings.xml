@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SnapCrap</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login_menu">LoginMenuActivity</string>
+    <string name="title_activity_friends">Friends</string>
+    <string name="title_activity_gallary">Gallery</string>
+    <string name="title_activity_view_request">ViewRequest</string>
+    <string name="title_activity_inbox">InboxActivity</string>
+</resources>

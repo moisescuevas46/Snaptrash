@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.student.snaptrash">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Camera" />
+        <activity
+            android:name=".LoginMenuActivity"
+            android:label="@string/title_activity_login_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Friends"
+            android:label="@string/title_activity_friends"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gallary"
+            android:label="@string/title_activity_gallary"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Register" />
+
+        <service
+            android:name=".FriendService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".FriendReciever"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.student.snaptrash.ADD_FRIEND_SUCCESS" />
+                <action android:name="com.example.student.snaptrash.ADD_FRIEND_FAILURE" />
+                <action android:name="com.example.student.snaptrash.FRIEND_REQUEST_SUCCESS" />
+                <action android:name="com.example.student.snaptrash.FRIEND_REQUEST_FAILURE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ViewRequest"
+            android:label="@string/title_activity_view_request"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InboxActivity"
+            android:label="@string/title_activity_inbox"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
